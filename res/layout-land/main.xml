@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutRecDisp"
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/editTextRecDisp"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:gravity="top"
+            android:longClickable="false" android:layout_weight="1" android:textSize="14sp" android:editable="false"/>
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutRecTool"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+
+            <Button
+                android:id="@+id/ButtonClear"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="清除"/>
+
+
+            <RadioGroup
+                android:id="@+id/radioGroupOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/radioButtonTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Txt" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonHex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hex" />
+            </RadioGroup>
+
+
+
+
+            <EditText
+                android:id="@+id/editTextLines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:editable="false"
+                android:enabled="false"
+                android:imeOptions="actionNone"
+                android:inputType="number"
+                android:longClickable="false"
+                android:text="0" >
+
+                <requestFocus />
+            </EditText>
+
+
+            <CheckBox
+                android:id="@+id/checkBoxAutoClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="自清" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/leftButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_toLeftOf="@+id/spinButton"
+            android:layout_centerVertical="true"
+            android:text="左转" />
+
+        <Button
+            android:id="@+id/rightButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+    		android:layout_toRightOf="@+id/spinButton"
+            android:layout_centerVertical="true"
+            android:text="右转" />
+
+        <Button
+            android:id="@+id/spinButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:text="旋转" />
+
+        <Button
+            android:id="@+id/forwardButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_above="@+id/spinButton"
+            android:layout_centerHorizontal="true"
+            android:text="前进" />
+
+        <Button
+            android:id="@+id/backwardButton"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/spinButton"
+            android:text="后退" />
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/LinearLayoutCOMAB"
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:layout_weight="0.04" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutCOMA"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+
+            <EditText
+                android:id="@+id/editTextCOMA"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:visibility="gone" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutTooLCOMA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutOption1COMA"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical" >
+
+                    <Spinner
+                        android:id="@+id/SpinnerBaudRateCOMA"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:visibility="gone" />
+
+                    <Spinner
+                        android:id="@+id/SpinnerCOMA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonCOMA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="ToggleButton" />
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutOption2COMA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" >
+
+
+                    <EditText
+                        android:id="@+id/editTextTimeCOMA"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" android:text="500" android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ms" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxAutoCOMA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="自动" />
+
+
+
+
+                    <Button
+                        android:id="@+id/ButtonSendCOMA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发送"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
